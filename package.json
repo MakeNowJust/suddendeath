@@ -1,0 +1,20 @@
+{
+  "name": "suddenly-death",
+  "description": "Ascii art of sudden death generator",
+  "version": "0.1.0",
+  "author": "TSUYUSATO Kitsune <make.just.on@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/MakeNowJust/suddenly-death/issues"
+  },
+  "homepage": "https://github.com/MakeNowJust/suddenly-death",
+  "keywords": [
+    "death",
+    "sudden"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MakeNowJust/suddenly-death.git"
+  }
+}
