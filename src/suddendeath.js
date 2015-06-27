@@ -23,7 +23,7 @@ function generate(lines, lens, maxLen) {
  *
  * ## results
  *
- * An text of ascii art of sudden death.
+ * A text of ascii art of sudden death.
  *
  * ## examples
  *
@@ -69,7 +69,7 @@ module.exports = function sudden_death(text) {
  *
  * ## results
  *
- * An text of ascii art of sudden death.
+ * A text of ascii art of sudden death.
  *
  * ## examples
  *
