@@ -6,15 +6,25 @@
   "bugs": {
     "url": "https://github.com/MakeNowJust/suddenly-death/issues"
   },
+  "dependencies": {
+    "visualwidth": "^0.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
+  },
   "homepage": "https://github.com/MakeNowJust/suddenly-death",
   "keywords": [
     "death",
     "sudden"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "./src/sudden-death.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/MakeNowJust/suddenly-death.git"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }
