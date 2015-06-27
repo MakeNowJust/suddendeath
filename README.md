@@ -4,6 +4,9 @@ Ascii art of sudden death (突然の死) generator
 
 It is inspired by Perl's module [Acme::SuddenlyDeath](https://github.com/papix/Acme-SuddenlyDeath).
 
+[![Build Status](https://travis-ci.org/MakeNowJust/suddendeath.svg)](https://travis-ci.org/MakeNowJust/suddendeath)
+[![npm version](https://badge.fury.io/js/suddendeath.svg)](http://badge.fury.io/js/suddendeath)
+
 
 ## Install
 
