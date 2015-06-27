@@ -87,6 +87,8 @@ module.exports = function sudden_death(text) {
  * ```
  */ 
 module.exports.single = function single(text) {
+  if (typeof text === 'undefined') text = '突然の死';
+
   var
   lines = text.split('\n'),
   lens = lines.map(vw),
