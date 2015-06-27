@@ -3,6 +3,9 @@
   "description": "Ascii art of sudden death generator",
   "version": "0.1.0",
   "author": "TSUYUSATO Kitsune <make.just.on@gmail.com>",
+  "bin": {
+    "suddendeath": "./bin/suddendeath.js"
+  },
   "bugs": {
     "url": "https://github.com/MakeNowJust/suddendeath/issues"
   },
