@@ -20,6 +20,8 @@ function generate(lines, lens, maxLen) {
  *
  * - `text` is the text to die suddenly.
  *   its default is `'突然の死'`.
+ * - If `proportional` is `true`, it returns
+ *   the text for proportional font.
  *
  * ## results
  *
@@ -43,7 +45,7 @@ function generate(lines, lens, maxLen) {
  * // => ￣^Y^Y^Y^Y￣
  * ```
  */ 
-module.exports = function sudden_death(text) {
+module.exports = function sudden_death(text, proportional) {
   if (typeof text === 'undefined') text = '突然の死';
 
   var
@@ -52,9 +54,9 @@ module.exports = function sudden_death(text) {
   maxLen = lens.slice().sort(function (a, b) { return b - a; })[0];
   maxLen += maxLen % 2;
 
-  return '＿' + strutil.cycle('人', Math.ceil((maxLen + 2) / 2)) + '＿\n' +
+  return '＿' + strutil.cycle('人', Math.ceil((maxLen + (proportional ? 0 : 2)) / 2)) + '＿\n' +
          generate(lines, lens, maxLen) + '\n' +
-         '￣' + strutil.cycle('^Y', maxLen + 2) + '￣';
+         '￣' + strutil.cycle('^Y', maxLen + (proportional ? 0 : 2)) + '￣';
 };
 
 /*
