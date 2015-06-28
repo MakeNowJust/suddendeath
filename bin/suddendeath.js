@@ -4,7 +4,8 @@ var
 suddendeath = require('..');
 
 var
-text = [], single = false,
+text = [],
+single = false, proportional = false,
 flag = true;
 
 process.argv.slice(2).forEach(function (arg) {
@@ -21,6 +22,9 @@ process.argv.slice(2).forEach(function (arg) {
         break;
       case '--single':
         single = true;
+        break;
+      case '--proportional':
+        proportional = true;
         break;
       case '--':
         flag = false;
@@ -44,6 +48,9 @@ process.argv.slice(2).forEach(function (arg) {
         case 's':
           single = true;
           break;
+        case 'p':
+          proportional = true;
+          break;
         default:
           console.error('Unrecognized option: ' + arg);
           process.exit(1);
@@ -64,7 +71,7 @@ if (text.length >= 1) {
   text = undefined;
 }
 
-console.log(single ? suddendeath.single(text) : suddendeath(text));
+console.log(single ? suddendeath.single(text) : suddendeath(text, proportional));
 
 
 function showHelp() {
@@ -72,17 +79,22 @@ function showHelp() {
   console.log('  Generate an ascii art of sudden death (突然の死).');
   console.log('');
   console.log('Usage');
-  console.log('  $ suddendath {-svh|--single|--help|--version} [--] <text>...');
+  console.log('  $ suddendath {-spvh|--single|--proportional|--help|--version} [--] <text>...');
   console.log('');
   console.log('Options');
-  console.log('  -s, --single  single line mode');
-  console.log('  -h, --help    show this help and exit');
-  console.log('  -v, --version show version and exit');
-  console.log('  --            after it, use as text');
+  console.log('  -s, --single       single line mode');
+  console.log('  -p, --proportional proportional font mode (only normal mode)');
+  console.log('  -h, --help         show this help and exit');
+  console.log('  -v, --version      show version and exit');
+  console.log('  --                 after it, use as text');
   console.log('');
   console.log('Examples');
   console.log('  $ suddendeath');
   console.log(suddendeath().split('\n').map(function (l) { return '  ' + l; }).join('\n'));
+  console.log('  $ suddendeath -s');
+  console.log(suddendeath.single().split('\n').map(function (l) { return '  ' + l; }).join('\n'));
+  console.log('  $ suddendeath -p');
+  console.log(suddendeath(undefined, true).split('\n').map(function (l) { return '  ' + l; }).join('\n'));
   console.log('  $ suddendeath 突然の 死');
   console.log(suddendeath('突然の\n死').split('\n').map(function (l) { return '  ' + l; }).join('\n'));
 }
