@@ -80,7 +80,7 @@ function showHelp() {
   console.log('  Generate an ascii art of sudden death (突然の死).');
   console.log('');
   console.log('Usage');
-  console.log('  $ suddendath {-spvh|--single|--proportional|--help|--version} [--] <text>...');
+  console.log('  $ suddendeath {-spvh|--single|--proportional|--help|--version} [--] <text>...');
   console.log('');
   console.log('Options');
   console.log('  -s, --single       single line mode');
