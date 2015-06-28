@@ -22,6 +22,14 @@ describe('suddendeath', function () {
     ].join('\n'));
   });
 
+  it('should return an ascii art of sudden death. (proportional)', function () {
+    expect(suddendeath('突然の死', true)).to.equal([
+      '＿人人人人＿',
+      '＞ 突然の死 ＜',
+      '￣^Y^Y^Y^Y￣',
+    ].join('\n'));
+  });
+
   it('should return an ascii art of sudden death. (multi line)', function () {
     expect(suddendeath('突然の\n死')).to.equal([
       '＿人人人人＿',
