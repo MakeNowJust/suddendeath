@@ -23,14 +23,27 @@ $ suddendeath
 ＞ 突然の死 ＜
 ￣^Y^Y^Y^Y^Y￣
 
+$ suddendeath 仕事しろ！
+＿人人人人人人＿
+＞ 仕事しろ！ ＜
+￣^Y^Y^Y^Y^Y^Y￣
+
+# single line mode
+$ suddendeath -s
+＞ 突然の死 ＜
+
+# for proportional font
+$ suddendeath -p
+＿人人人人＿
+＞ 突然の死 ＜
+￣^Y^Y^Y^￣
+
+# multi lines
 $ suddendeath 突然の 死
 ＿人人人人＿
 ＞ 突然の ＜
 ＞   死   ＜
 ￣^Y^Y^Y^Y￣
-
-$ suddendeath -s
-＞ 突然の死 ＜
 ```
 
 
@@ -44,6 +57,11 @@ console.log(suddendeath());
 // => ＿人人人人人＿
 // => ＞ 突然の死 ＜
 // => ￣^Y^Y^Y^Y^Y￣
+
+console.log(suddendeath('突然の死', true)); // proportional
+// => ＿人人人人＿
+// => ＞ 突然の死 ＜
+// => ￣^Y^Y^Y^￣
 
 console.log(suddendeath('突然の\n死'));
 // => ＿人人人人＿
