@@ -1,7 +1,7 @@
 {
   "name": "suddendeath",
   "description": "Ascii art of sudden death generator",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "TSUYUSATO Kitsune <make.just.on@gmail.com>",
   "bin": {
     "suddendeath": "./bin/suddendeath.js"
