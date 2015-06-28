@@ -13,7 +13,7 @@ function generate(lines, lens, maxLen) {
 };
 
 /*
- * # sudden_death
+ * # suddendeath
  *
  * Generate an ascii art of sudden death (突然の死)
  * from specified `text`.
@@ -33,21 +33,26 @@ function generate(lines, lens, maxLen) {
  *
  * ```
  * var
- * sudden_death = require('suddenly-death');
+ * suddendeath = require('suddendeath');
  *
- * console.log(sudden_death());
+ * console.log(suddendeath());
  * // => ＿人人人人人＿
  * // => ＞ 突然の死 ＜
  * // => ￣^Y^Y^Y^Y^Y￣
  *
- * console.log(sudden_death('突然の\n死'));
+ * console.log(suddendeath('突然の\n死'));
  * // => ＿人人人人＿
  * // => ＞ 突然の ＜
  * // => ＞   死   ＜
  * // => ￣^Y^Y^Y^Y￣
+ *
+ * console.log(suddendeath('突然の死', true));
+ * // => ＿人人人人＿
+ * // => ＞ 突然の死 ＜
+ * // => ￣^Y^Y^Y^￣
  * ```
  */ 
-module.exports = function sudden_death(text, proportional) {
+module.exports = function suddendeath(text, proportional) {
   if (typeof text === 'undefined') text = '突然の死';
 
   var
@@ -62,9 +67,9 @@ module.exports = function sudden_death(text, proportional) {
 };
 
 /*
- * # `sudden_death.single`
+ * # `suddendeath.single`
  *
- * It's single line version of `sudden_death'
+ * It's single line version of `suddendeath'
  *
  * ## arguments
  *
@@ -79,12 +84,12 @@ module.exports = function sudden_death(text, proportional) {
  *
  * ```
  * var
- * sudden_death = require('suddenly-death');
+ * suddendeath = require('suddendeath');
  *
- * console.log(sudden_death.signle());
+ * console.log(suddendeath.signle());
  * // => ＞ 突然の死 ＜
  *
- * console.log(sudden_death('突然の\n死'));
+ * console.log(suddendeath('突然の\n死'));
  * // => ＞ 突然の ＜
  * // => ＞   死   ＜
  * // What's single line version!
