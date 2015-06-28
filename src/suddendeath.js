@@ -56,7 +56,7 @@ module.exports = function sudden_death(text, proportional) {
 
   return '＿' + strutil.cycle('人', Math.ceil((maxLen + (proportional ? 0 : 2)) / 2)) + '＿\n' +
          generate(lines, lens, maxLen) + '\n' +
-         '￣' + strutil.cycle('^Y', maxLen + (proportional ? 0 : 2)) + '￣';
+         '￣' + strutil.cycle('^Y', maxLen + (proportional ? -1 : 2)) + '￣';
 };
 
 /*
