@@ -1,3 +1,5 @@
+'use strict';
+
 var
 vw = require('visualwidth'),
 strutil = require('./strutil');

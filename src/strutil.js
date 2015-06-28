@@ -1,3 +1,5 @@
+'use strict';
+
 var
 cycle = exports.cycle = function cycle(str, n) {
   var
