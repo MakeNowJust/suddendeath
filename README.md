@@ -1,5 +1,7 @@
 # suddendeath
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/MakeNowJust/suddendeath.svg)](https://greenkeeper.io/)
+
 Ascii art of sudden death (突然の死) generator
 
 It is inspired by Perl's module [Acme::SuddenlyDeath](https://github.com/papix/Acme-SuddenlyDeath).
